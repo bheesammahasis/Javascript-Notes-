@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JAVASCRIPT NOTES WITH EXAMPLES</h1>
+    <p><i style="color: indigo;">Most good programmers do programming not because they expect to get paid or get adultation by the public, but because it is fun to program<i>....<i style="color:crimson">by linus torvalds<i></p>
+    <h4><i>Made By Er. A.K.PANDEY(working as a software developer)</i></h4>
+    <div class="d1">om</div> 
+    <div class="d2">It's</div>
+    <pre class="ques">
+    // Variables -  A variable is a container with a name that stores a values. it can be used to 
+    // declare different types of data.
+    //there are 3 keywords to declare the variable : var, let , const.
+    
+    // Declaration - it is the process of creating a variable. with the help of above keywords.
+     //  var x;
+    
+    // // Assigning - Giving value to a container.it can be done multiple times.
+    //   x=25;//Assigning a value 
+    //   x=23;//Assigning a value 
+    // Intilization - Assigning the value first value.
+    //var y = 10; // Declaration and intilization in the same line;
+    
+     // var - Var is the oldest way to declare varaible.It is function scope which means that it 
+     // not accessable outside of a function if it is declared inside of it .
+     // if it is declared outside a function then it is global scope.
+     // you can assign and redeclare the value multiple times.
+    
+     //let - let is the new way to declare varaible.It is block scope which means it is accesable 
+     // only on that particular block.
+     // if it is declared outside a function then it is global scope.
+    // you can assign the value multiple times. but can not redeclare it 
+    
+    //const - const is the new way to declare varaible.It is block scope which means it is accesable 
+     // only on that particular block.
+     // if it is declared outside a function then it is global scope.
+     //in const you have to declare and intilize the value at the same time.
+    
+    //  var x =23;//overwrite
+    //   var x = 25;
+    //   console.log(x);
+    
+    //   let y = 46;
+    //     y =  56;
+    //   console.log(y);
+    
+    //  const z = 100;
+      
+    //   console.log(z);
+    
+    // function add () {
+    //   var a =10;
+    //   console.log(a);
+    // }
+    // console.log(a);//error
+    
+    // {
+    //   let b =10;
+    //   console.log(b);
+    // }
+    // console.log(b);//error
+    
+    // {
+    //   const b =10;
+    //   console.log(b);
+    // }
+    // console.log(b);//error
+    
+    //  //undefined - it is the default value given to a variable if you haven't gave the value to your 
+    //  // variable until now.
+    
+    //   var xyz;
+    //   console.log(xyz);//undefined
+    //   xyz = 5;
+    //   console.log(xyz);//5
+    //   console.log(xyz);
+    //   console.log(xyz);
+    //   console.log(xyz);
+    
+    //  // not defined - this is a type of error which occurs when to try to access something that is not
+    //  // yet declared.
+    
+    //   console.log(qw);
+</pre>
+<hr>
+<div class="d1">om</div> 
+<div class="d2">It's</div>
+<pre class="ans">
+     // Rules to write a name of a variable
+     // 1. Variable name must start from letter or underscore or dollar symbol.
+     //2. Variable name can have letter underscore or digit and dollar in between also.space is not included.
+     //3. Javascript is a case sensitive language that means a and A are two different entities.
+     // 4. Variable cannot be named as keywords like var , let , else , if , etc.
+    // var a;
+    //var A;
+     //strict mode - this feature of javascript let you to write the more scecure code and most of the error free code.
+    
+     // Datatypes - Data type tells you what type of data it is.
+     //Data type is a classification of which type of data it is to let interpreter to know what type of data it is dealing with.
+     //Types of datatype : Primitive and Non primitive
+     //Primitive Data types
+     //Number  - 1 2 3 4 
+     //String - "Saurabh" , "Pandey", 'Hello'
+     //Boolean - true or false
+     //undefined
+     //Symbol - latest version we have some unique symbols that can be stored.
+    
+     // var x = 12;
+     // Non Primitive Data Type
+     // Array  - [1,2,3,4]
+     //Object - {fullname : "Saurabh Pandey", age : "30" }
+    
+     //Operator - Operators are symbols that perform special operations on one or more operands.
+    
+     // Types of Operators 
+     // 1. Arthimetic Operators : + , - , /,*,%
+    
+    //   let a = 5;
+    //   let b = 10;
+    //   console.log(a+b);
+    //   console.log(a-b);
+    //   console.log(a*b);
+    //   console.log(b/a);
+    //   console.log(b%a);
+    
+    
+     // 2. Comparison Operators : == ,===, > , <, >= , <= ,!= it return boolean value.
+     
+    //  console.log(4==4);// true
+    //  console.log(4==5);//false
+    //  console.log(4=="4");//true
+    //  console.log(4===4);//true
+    //  console.log(4==="4");//false
+    //  console.log(5>=5);//true
+    //  console.log(4>3);//true
+    //  console.log(4!="4")//false
+    //  console.log(4!=3)//true
+    
+    // === is faster because it doesn't do the type conversion as soon as it finds that the comparing values are of two different datatypes it will give you false.
+    
+    //Logical Operators - Logical OR (||) , Logical AND(&&) , Logical Not(!).
+    
+    // Logical OR(||) - Logical OR is the operator which return true value if it gets atleast 1 true condition or any of the given condition is true.
+    
+    // console.log((4>5)||(5>4));//true
+    // console.log((4>5)||(3>4));//false
+    
+    // // Logical AND(&&) - Logical AND is the operator which return true value if it gets all true condition or all of the given conditions are true.
+    
+    // console.log((4>5)&&(5>4));//false
+    // console.log((6>5)&&(5>4));//true
+    
+    // //Logical NOT(!) - If you answer is true it will reverse you answer to false and vice versa done.
+    
+    // console.log(!(4>5));//true
+    // console.log(!(6>5));//false
+    
+    //4. Assignment Operators - these operators assign value to the variables.
+    // = , += , -= , *= , /= , %=
+    
+    //  var abc = 5;
+    //  console.log(abc);//5
+    //  abc+=2;
+    //  console.log(abc);//7
+    //  abc-=2;
+    //  console.log(abc);//5
+    //  abc*=2;
+    //  console.log(abc);//10
+    //  abc/=2;
+    //  console.log(abc);//5
+    //  abc%=2;
+    //  console.log(abc);//1
+    
+    // // ternary operators(?:) - (condition) ? statement 1  : statement 2
+    // // if the condtion is true then statement 1 will run.
+    // // else statement 2 will run.
+    
+    //  (2>1) ? console.log("Hello") : console.log("World");
+    
+    // //bitwise operators  - these operators works on bits of the decimal values.
+    // // bitwsise AND(&) , bitwise OR(|), bitwise XOR(^),bitwise NOT(~), left shift(<<)
+    // console.log(2|11);//11
+    // console.log(2&11);//2
+    // // console.log(5 <<2);//20
+    // // console.log(5>>2)//1
+    
+    //increment / decrement operator - increase the value by 1 pr decrease the value by 1.
+    //increment ++ decrement -- 
+    //postfix will operate it afterwards.
+    //prefix will  operate it before.
+    //  var a =5;
+    // // console.log(--a);//4
+    // var b=a++ + a++;
+    //  console.log(b);//11
+    //  console.log(a);//7
+    // // console.log(a);//5
+</pre>
+<hr>
+<div class="d1">om</div> 
+<div class="d2">It's</div>
+    <pre class="ques">
+    //conditional statements - these statements are used to excute some lines of codes under some condition
+    //types of conditional statements  - if , if else , ladder if else , neseted if else , switch case.
+    //1. if - if your given condition is true then only your code under if scope will excute.
+    
+    // let a = 10;
+    // if(a>0) {//10>0
+    //   console.log("A is a positive number");
+    // }
+    // let b =5;
+    // if(b< 0) {//5>0
+    
+    //   console.log("B is a positive number");
+    
+    // }
+    
+    // //2. if else - This statement is used when you checking for two condition and those condition are opposite to each other.
+    
+    // let n = 6;
+    // if(n%2===1) {//6%2===1
+    //   console.log("Odd");
+    // }
+    // else {
+    //   console.log("Even");
+    // }
+    
+    // 3. ladder if else - This statement is used when you are having more than two answer or more than 2 condition is to check.
+    
+    // if(condition 1) {
+    
+    // }
+    // else if(condition 2) {
+    
+    // }
+    // else {
+    
+    // }
+    
+    // let ch = "/";
+    // let a=10;
+    // let b=5;
+    // if(ch==="+") {
+    //     console.log(a+b);
+    // }
+    // else if(ch==="-") {
+    //     console.log(a-b);
+    // }
+    // else if(ch==="/") {
+    //     console.log(a/b);//2
+    // }
+    // else if(ch==="*"){
+    //     console.log(a*b);//50
+    // }
+    // else {
+    //     console.log("Invalid Input")
+    // }
+    
+    // switch case - This statement as ladder if else but the syntax for this is changed.
+    // switch (variable) {
+    //  case 1:----------------
+    //---------------------- 
+    //------------------
+    //break;
+    //  case 2:----------------
+    //---------------------- 
+    //------------------
+    //break;
+    //  case 3:----------------
+    //---------------------- 
+    //------------------
+    //break;
+    //default :
+    //}
+    // let ch="<<";
+    // let a = 10;
+    // let b = 5;
+    // switch(ch) {
+    //     case "+" : console.log(a+b);
+    //                 break;
+    //     case "-" : console.log(a-b);
+    //                 break;
+    //     case "/" : console.log(a/b);
+    //                 break;
+    //     case "*" : console.log(a*b);
+    //                 break;
+    //     default : console.log("Invalid Input");
+    // }
+    
+    
+    //looping - Repeating of block of codes until the condition is true.
+    // Terms related to looping - 
+    //Intilization - Assigning the first time, it tells us where the loop is starting.
+    //Condition - It tells us upto where the loop should run.
+    //Incre/Decre - It helps us to reach the endpoint of the loop.
+    
+    //Types of loops
+    // for, while, do while
+    </pre>
+    <hr>
+    <div class="d1">om</div> 
+    <div class="d2">It's</div>
+    <pre class="ans">
+    //for - In this loop all the looping terms that are initilization , condition and incre/decre are in the same section.
+    
+    //Syntax: for(initilization ; condition ; incre/decre) {
+    // statement 1  
+    // statement 2
+    // statement 3
+    // --------
+    //}
+    
+    // let num;
+    // for(num=1;num<=10;num++) {
+    //   console.log(num);
+    // }
+    
+    //while - In this loop all the looping terms that are initilization , condition and incre/decre are  not in the same section.
+    
+    //Syntax: initilization
+    // while(condition) {
+    // statement 1  
+    // statement 2
+    // statement 3
+    // --------
+    //incre/decre
+    //}
+    //  let n  = 1;
+    // while(n<=17) {
+    //     n++;
+    //   console.log(n);
+    //   n+=3;
+    // }
+    
+    //do - while - In this loop the condtion is checked at last and other things are same as while loop.
+    
+    //Syntax: initilization
+    // do{
+    // statement 1  
+    // statement 2
+    // statement 3
+    // --------
+    //incre/decre
+    //}while(condition) 
+    
+    // let n  = 1;
+    // do{
+    //   console.log(n);
+    //   n++;
+    // }while(n<=10) 
+    
+    // let x  = 1;
+    // do{
+    //   console.log(x);
+    //   x++;
+    // }while(x<=0) //false
+    
+    // function - function are the piece of code that are used to perform a particular task.
+    // Syntax - function function_name() {
+    // statement 1
+    // statement 2
+    // statement 3
+    // statement 4
+    //}
+    //function_name() // call a function // performing a task.
+    // function add() {
+    //   let a =10;
+    //   let b= 20;
+    //   return ( a+b);
+      
+    // }
+    // console.log(add());
+    // let ans = add();
+    // console.log(ans);
+    // console.log(add());
+    
+    //return key word - return keyword is used to return the final output to the function 
+    
+    // function with parameters - when at the time of calling a function some values are passed with it(those are called arguments) and at the time of creation of a function parameters are there to catch those passed values and perform the given task on them.
+    
+    //  function task(a,b,c) {
+    //     return (a+b)*c;
+    // }
+    
+    // console.log(task(3,4,1));
+    // console.log(task(23,23,2));
+    
+    
+    // arrow function - this function are introduced in ES6 javasscript . they are used to make more concise function.
+    
+    //  let add = (a,b)=> a+b;
+    
+    //  console.log(add(3,4));
+    // function noOfDigits(N) {
+    // *-***************
+    // }
+    
+    // console.log(noOfDigits(1234));
+    
+    // pattern priting questions
+    
+    11111
+    22222
+    33333
+    44444
+    55555
+    </pre>
+    <hr>
+<div class="d1">om</div> 
+<div class="d2">It's</div>
+  <pre class="ans">
+    // let string="" ;
+    // for (let row =1;row<=5;row++) { // this loop is for rows.
+    //     for(let col =1;col<=5;col++) { //  this loop is for Coloumn.// 5 
+          times
+    //        string+=row; // string ="1"
+    //                     // string = "11"
+    //                     // string = "111"
+    //                     // string = "1111"
+    //                     // string = "11111_"
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    // // 12345
+    // // 12345
+    // // 12345
+    // // 12345
+    // // 12345
+    
+    // let string="" ;
+    // for (let row =1;row<=5;row++) { // this loop is for rows.
+    //     for(let col =1;col<=5;col++) { //  this loop is for Coloumn.// 5 times
+    //        string+=col; // string ="1"
+    //                     // string = "12"
+    //                     // string = "123"
+    //                     // string = "1234"
+    //                     // string = "12345_"
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    // *****
+    // *****
+    // *****
+    // *****
+    // *****
+    
+    // let string="" ;
+    // for (let row =1;row<=5;row++) { // this loop is for rows.
+    //     for(let col =1;col<=5;col++) { //  this loop is for Coloumn.// 5 times
+    //        string+="*"; 
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    
+    
+    // // 1 -- row 1
+    // // 12 -- row 2
+    // // 123 -- row 3
+    // // 1234 -- row 4
+    // // 12345 -- row 5
+    
+    
+    // let string="" ;
+    // for (let row =1;row<=5;row++) { // this loop is for rows.
+    //     for(let col =1;col<=row;col++) { //  this loop is for Coloumn.
+    //        string+=col; 
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    // // 1 -- row 1
+    // // 22 -- row 2
+    // // 333 -- row 3
+    // // 4444 -- row 4
+    // // 55555 -- row 5
+    
+    // let string="" ;
+    // for (let row =1;row<=5;row++) { // this loop is for rows.
+    //     for(let col =1;col<=row;col++) { //  this loop is for Coloumn.
+    //        string+=row; 
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    // // * -- row 1
+    // // ** -- row 2
+    // // *** -- row 3
+    // // **** -- row 4
+    // // ***** -- row 5
+    </pre>
+    <hr>
+    <pre class="ques">
+    // let string="" ;
+    // for (let row =1;row<=5;row++) { // this loop is for rows.
+    //     for(let col =1;col<=row;col++) { //  this loop is for Coloumn.
+    //        string+="*"; 
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    // ***** 5
+    // ****   4
+    // ***   3
+    // **    2
+    // *   1
+    
+    // let string="" ;
+    // for (let row =5;row>=1;row--) { // this loop is for rows.
+    //     for(let col =1;col<=row;col++) { //  this loop is for Coloumn.
+    //        string+="*"; 
+    //     }// coloumn loop ends here.
+    //     string+="\n"; // string = "12345
+    //                             // _"
+    // }// row loop ends here.
+    
+    // console.log(string);
+    
+    let string="" ;
+    for (let row =1;row<=5;row++) { // this loop is for rows.
+        for(let col =5;col>=row;col) { //  this loop is for Coloumn.
+           string+="*"; 
+        }// coloumn loop ends here.
+        string+="\n"; // string = "12345
+                                // _"
+    }// row loop ends here.
+    
+    console.log(string);
+     
+    // // Array - It is a special variable which holds more than 1 value.
+    // // you can store the elements at the time of creation of the array.
+    
+    //syntax - declaration arrayname = [values which are going to be stored sperated by commas.]
+    
+    // let array = [1,2,3,4,5];
+    // console.log(array);
+    // //console.log(array[3]);
+    
+    // // you can store the elements one by one by giving its positon or index value.
+    
+    //syntax - arrayname[index value where you want to store] = value which you want to store.
+    
+    // let array1 = [];
+    // console.log(array1);
+    // array1[0] = 1;//first element
+    // console.log(array1);
+    // array1[1] = 3;//second
+    // console.log(array1);
+    // array1[2] = 6;//third
+    // console.log(array1);
+    // array1[3] = 7;//fourth
+    // console.log(array1);
+    
+    // array methods - methods are some predefined function that do the particular task.
+    
+    //push() - adds one or more elements at the end of the array and returns the new lenth of the array.
+    // let arr = [1,2,3];
+    // console.log(arr);//[1,2,3]//3
+    // let newlength = arr.push(5);//4
+    // console.log(arr);// [1,2,3,5]
+    // console.log(newlength);//4
+    
+    // pop() - removes the last element from an array and returns the last elements which is removed from an array.
+    //  let arr = [11,22];
+    // // console.log(arr);//[11,22,33]
+    // // //let deletedvalue = arr.pop();
+    // // console.log(arr);//[11,22]
+    // // //console.log(deletedvalue);//33
+    
+    // // length  - will give you the length of an array
+    //  console.log(arr.length);
+    
+    // shift() - removes the first element from an array and returns the first elements which is removed from an array.
+    // let arr = [11,22,33];
+    // console.log(arr);//[11,22,33]
+    // let deletedvalue = arr.shift();
+    // console.log(arr);//[22,33]
+    // console.log(deletedvalue);//11
+    // console.log(arr.length);//2
+    
+    //unshift() - adds one or more elements at the starting of the array and returns the new length of the array.
+    // let arr = [1,2,3];
+    // console.log(arr);//[1,2,3]
+    // let newlength = arr.unshift(5,4);
+    // console.log(arr);// [5,4,1,2,3]
+    // console.log(newlength);//5
+    </pre>
+    <hr>
+    <div class="d1">om</div> 
+    <div class="d2">It's</div>
+    <pre class="ans">
+    // indexOf() - searches an array for a specific elements and returns its first index elements.
+    //               0   1   2   3   4   5   6
+    // let array = ['a','b','a','b','b','e','e'];
+    // let index = array.indexOf('e');//5
+    // console.log(index);
+    // console.log(array.indexOf('a'));//0
+    // console.log(array.indexOf('b'));//1
+    // console.log(array.indexOf('f'));//-1 element not found
+    
+    // lastindexOf() - searches an array for a specific elements and returns its last index elements.
+    //               0   1   2   3   4   5   6
+    // let array = ['a','b','a','b','b','e','e'];
+    // let index = array.lastIndexOf('e');//6
+    // console.log(index);
+    // console.log(array.lastIndexOf('a'));//2
+    // console.log(array.lastIndexOf('b'));//4
+    // console.log(array.lastIndexOf('f'));//-1 element not found
+    
+    //slice() - returns a shallow copy of a portion of an array into a new array. Does not modify the original array.
+    //                0   1   2   3   4   5   6
+    //  let array = ['a','b','a','b','b','e','e'];
+    
+    // let arr2 = array.slice(3,5);// last index is not included.
+    // console.log(arr2);//['b','b']
+    // console.log(arr2.length);//2
+    // console.log(array);//['a','b','a','b','b','e','e'];
+    
+    //splice() - add and/or removes elements from an array. Modify the original array
+    //            0   1   2   3   4   5   6
+    // let array = ['a','b','a','b','b','e','e'];
+    
+    // let spliced = array.splice(1,1,'z','g');
+    // console.log(spliced);
+    // console.log(spliced.length);
+    // console.log(array);
+    
+    // map() - create a new array with results of calling a provided function on every element in the array. Does not modify the original array.
+    // let array = [2,3,4,5,6];
+    
+    // let newarray = array.map(function(x) {
+    //    return x*x*x;
+    // });
+    // //[4,6,8,10,12]
+    // console.log(newarray);
+    // console.log(array)
+    
+    //reduce() - applies a function against an accumulator and each element in the array 
+    //(from left to right) to reduce it to a single value.Does not modify the original array.
+    // let array = [-2,3,4,-5,6];
+    
+    // let ans = array.reduce(function(acc ,curr) {
+    //    return acc*curr;
+    // });
+    // console.log(ans);//6
+    // console.log(array);//[-2,3,4,-5,6];
+    
+    //some() - tests whether some elements in the array passes the particular cases which we gave to it.
+    // Returns boolean value. Does not modify Original Array.
+    
+    // let array = [1,2,5,7,9];
+    
+    // let ans = array.some(function(x){
+    //     return x%2===0;
+    // });
+    // console.log(ans);//true
+    // console.log(array);
+    
+    //every() - tests whether every elements in the array passes the particular cases which we gave to it.
+    // Returns boolean value. Does not modify Original Array.
+    
+    // let array = [4,2,6,8,10];
+    
+    // let ans = array.every(function(x){
+    //     return x%2===0;
+    // });
+    // console.log(ans);//true
+    // console.log(array);
+    
+    // String  - Collections of Characters.
+    
+    //String_methods 
+    //length - tells you the length of the string.
+    // let string = "Saurabh Pandey";
+    // console.log(string.length);
+    
+    //charAt() - This methods will return you the particular character in the specific index.
+    // let str = "Hello World";
+    // console.log(str.charAt(6));//W
+    // console.log(str.charAt(2));//l
+    
+    //concat() - This methods combines two or more strings.Returns new string.Does not modify the original strings
+    // let str1 = "Hello ";
+    // let str2 = "World";
+    // let str3 = " !"
+    // console.log(str1.concat(str2 , str3));//"Hello World"
+    // console.log(str1);//Hello
+    // console.log(str2);//World
+    </pre>
+    <hr>
+    <div class="d1">om</div> 
+    <div class="d2">It's</div>
+    <pre class="ques">
+    //indexOf() - This methods returns the index of the first occurence of the element.
+    // let string = "jasdjasdwwerbnmw";
+    // console.log(string.indexOf('s'));
+    // console.log(string.indexOf('j'));
+    // console.log(string.indexOf('w'));
+    
+    // //lastIndexOf() - This methods returns the index of the last occurence of the element.
+    // let string = "ajsdjasdwwerbnmw";
+    // console.log(string.lastIndexOf('s'));//6
+    // console.log(string.lastIndexOf('j'));//4
+    // console.log(string.lastIndexOf('z'));//15
+    
+    //replace() - This methods replace the specified string value with another value.Does not modify the original array
+    // let string = "Hello World";
+    // console.log(string.replace('World','Saurabh'));
+    // console.log(string);
+    
+    //split() - This Methods splits a string into array of substring based on specific sperator.
+    // let str = "Hello World!";
+    // console.log(str.split(' '));//["Hello","World!"]
+    // console.log(str.split(""));//
+    // console.log(str.split('l'));
+    
+    //toLowerCase() - This methods will convert every character of that string to lower case.
+    
+    // let string = "SAuRaBH PANDEY";
+    // console.log(string.toLowerCase());
+    
+    //toUpperCase() - This methods will convert every character of that string to upper case.
+    
+    // let string = "saurabh pandey";
+    // console.log(string.toUpperCase());
+    
+    //search() - This method will search for the string which we specify and it will return the
+    // index of that string. and if it not found then it is -1.
+    
+    // let str = "Hello World!";
+    // console.log(str.search('o'));//4
+    // console.log(str.search('w'));//-1
+    
+    //substr() - This method extracts a specified number of characters.
+    
+    // let str = "Hello, World!";
+    // console.log(str.substr(7,5));//including the given index value;
+    
+    //substring() - This method extracts a specified number of characters with specified indexs also.
+    
+    //  let str1 ="Hello World";
+    //  console.log(str1.substring(6,11));//first index is inclusive and last is exclusive.
+    
+    //join() - This methods join the string values
+    
+    // reverse() - This method works on array,
+    // let array = [1,2,3,4,5]
+    // console.log(array.reverse());
+    //for example let str = Hello World
+    // ans = dlroW olleH;
+    
+    // let str = "Hello World";
+    // console.log(str.split(""));
+    // console.log(str.split("").sort());
+    // console.log(str.split("").sort().join(""));
+    
+    // let str = "saurabh"; // aabhrSu
+    // let arr = str.split("")
+    // console.log(arr.sort().join(""));
+    
+    
+    // Map - Map is a object thats contains collections of key/value pairs.
+     // const map = new Map();// a empty map will be created.
+    
+    // //  //set - set will set use to set the key and values in the map.
+    //   map.set('name','Saurabh');
+    //   map.set('age',30);
+    //   console.log(map);
+    // //  //get - get the particular key values.
+    //   console.log(map.get("name"));//Saurabh
+    //   console.log(map.get("age"));//30
+    
+    // let arr = [2, 3, 4 , 5, 6]
+    //  for(const a of arr) {//arr
+    //     console.log(a);
+    //  }
+    //   for(const [key, value] of map) {
+    //      console.log(key + " = " + value);
+    //   }
+    </pre>
+    <hr>
+    <div class="d1">om</div> 
+    <div class="d2">It's</div>
+    <pre class="ans">
+    //  //set - It a collection of unique value only.
+    
+    //  const settest = new Set();
+    
+    // add -add the unique values in the set.
+    
+    // settest.add(23);
+    // settest.add(45);
+    // settest.add(23);
+    // settest.add(50);
+    // console.log(settest);
+    
+    // // has - it will check that the particular element is present on the set 
+      or not.
+    // // and it will return the boolean.
+    
+    // console.log(settest.has(50));//true
+    // console.log(settest.has(23));//true
+    // console.log(settest.has(46));//false
+    
+    // let str ="abcadeecfb"
+    
+    // const s = new Set();
+    // for(let i=0;i< str.length;i++) {
+    //     s.add(str[i]);
+    // }
+    // console.log(...s);
+    // let ans = ""
+    // for(let i=0;i< s.size;i++) {
+    //     ans+=s[i];
+    // }
+    // console.log(ans);
+    
+    // object - object is a collection of key-value pairs
+    
+    // let object1 = {
+    //     a : 1,
+    //     b : 2,
+    //     d : 4
+    // }
+    // console.log(object1.a)
+    // let object2 = {
+    //     a : 3,
+    //     f : 2,
+    //     g : 4
+    // }
+    // let object4 = {
+    //     i : 3,
+    //     h : 2,
+    //     j : 4
+    // }
+    // // // keys are also known as object parameter.
+    // // console.log(object4.h);//3
+    // // console.log(object1);
+    // // //Object.keys - this will let you to access only the keys 
+    // // //Object.values - this will let you to access only the values 
+    // console.log(Object.keys(object4));
+    // console.log(Object.values(object4));
+    
+    // // //Object.assign - this will copy the values of objects in the target 
+       object or new object.
+    // let object3 = Object.assign({},object1,object2,object4);
+    // console.log(object3);
+    
+    // // this - it will tell you in which current window you are.
+    // let x = this;
+    // console.log(x);
+    
+    // let newObject = {
+    //     firstname : "Saurabh",
+    //     lastname : "Pandey",
+    //     age : 30,
+    //     func : function() {
+    //         console.log(this.firstname + " " + this.lastname +" age :" +this.age);
+    //     }
+    // }
+    //  newObject.func();
+    // function constructor - it will help you to make the same kind of objects.
+    //template for making same type of object.
+    function student(first, last, age) {
+        this.firstname = first;
+        this.lastname = last;
+        this.age = age;
+    }
+    
+    
+     let Ashish = new student(" Ashish", " Singh", 50);
+     let Praveen = new student(" Praveen"," Ravuri"," 100");
+     let Malik = new student(" Malik", " Mudasir"," 150");
+    //  console.log(Ashish);
+    //  console.log(Praveen);
+    //  console.log(Malik);
+</pre>
+<hr>
+<div class="d1">om</div> 
+<div class="d2">It's</div>
+    <pre class="ques">
+    // Array of Object : An array (it is a special variable which can stores 
+       more than one element.)
+    // if it holds the collections of objects then it is array of objects.
+    
+    // let arrayOfObjects = [
+    //     object1 = {
+    //         a : 3,
+    //         b : 2,//0
+    //         c : 4
+    //     },
+    //     object2 = {
+    //         d : 3,
+    //         e : 2,//1
+    //         f : 4
+    //     },
+    //     object3 = {
+    //         g : 3,
+    //         h : 2,//2
+    //         i : 4
+    //
+    //     }
+    
+    // obj1 = {
+    //     name : " Saurabh",
+    // }
+    // obj1.setter = function() {
+    //     console.log(this.name);
+    // }
+    // console.log(obj1);
+    
+    // obj1 = {
+    //     name : " Saurabh",
+    //     setter : function (){
+    //      console.log(this.name);
+    //     }
+    // }
+    
+    
+    
+    // ]
+    // // console.log(arrayOfObjects);
+    // // console.log(arrayOfObjects.length);
+    // console.log(arrayOfObjects[2]);
+    // console.log(arrayOfObjects[2].h);
+    
+    let studentRecords = [{name: ' John', id:123,marks:98},
+                         {name: ' Baba', id:101,marks:23},
+                         {name: ' yaga', id:200,marks:45},
+                         {name: ' Wick', id:115,marks:75}]
+         let ans = [];
+        for(let i=0;i< studentRecords.length;i++) {
+            if(studentRecords[i].marks>50) {
+                 ans.push(studentRecords[i].name);
+            }
+        }
+    console.log(ans);
+    
+    //fetching the records of the students who scored more than 50.
+    
+    // let ans = [];
+    //     for(let i=0;i< studentRecords.length;i++) {
+    //         if(studentRecords[i].marks>50) {
+    //           ans.push(studentRecords[i]);
+    //         }
+    //     }
+    // console.log(ans);
+    //fetching the records of the students who scored more than 50 && id is greater than 120.
+    
+    // let ans = [];
+    //     for(let i=0;i< studentRecords.length;i++) {
+    
+    //         if(studentRecords[i].marks>50 && studentRecords[i].id>120) {
+    //           ans.push(studentRecords[i]);
+    //         }
+    //     }
+    // console.log(ans);
+    
+    
+    
+    
+    // let str ="abcadeecfb"
+    
+    // const s = new Set();
+    // for(let i=0;i< str.length;i++) {
+    //     s.add(str[i]);
+    // }
+    // console.log(...s);
+    
+    
+    // let word = "abcadeecfb";
+    // let map = new Map();//i=3;//a
+    
+    // for(let i=0; i < word.length; i++)
+    // {
+    //     if(map.has(word[i]))
+    //     {
+    //         map.set(word[i],Number(map.get(word[i]))+1);
+    //     }
+    //     else
+    //     {
+    //         map.set(word[i],1);
+    //     }
+    // }
+    
+    //   for(const [key, value] of map) {
+    //      console.log(key + " = " + value);
+    //  }
+  <hr>
+  <p style="color: brown;text-align: center;">if any error in this notes kindly drop email to...
+  <i style="color:darkorange;text-align: center;">By Er. A.K.PANDEY(working as a software developer)</i>
+    <i style="color:darkblue;text-align: center;">CONTACT = bheesammahasis108@gmail.com</i></p>
+  <h4 style="color: black;text-align: center;">THANKING YOU</h4>
+</body>
+</html>
