@@ -39,7 +39,7 @@ hr{
     }
 
     to{
-        top: 495px;
+        top: 800px;
         rotate: 360deg;
     
     }
@@ -69,8 +69,18 @@ hr{
     }
 
     to{
-        top: 515px;
+        top: 800px;
         rotate: 360deg;
     
     }
+}
+.d3{
+    float: right;
+    margin: 20px;
+    width: 180px;
+    height: 30px;
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color: chartreuse;
+    text-align: center;
 }
